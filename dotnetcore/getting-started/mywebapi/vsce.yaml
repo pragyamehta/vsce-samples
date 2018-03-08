@@ -24,3 +24,9 @@ configurations:
       - "**/Pages/**"
       - "**/Views/**"
       - "**/wwwroot/**"
+      - "!**/*.{sln,csproj}"
+      iterate:
+        processesToKill: 
+        - dotnet
+        buildCommands: 
+        - dotnet build --no-restore

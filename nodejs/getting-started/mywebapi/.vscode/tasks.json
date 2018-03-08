@@ -5,13 +5,9 @@
             "command": "vsce",
             "args": [
                 "up",
-                "--incremental",
-                "--no-command",
-                "--sync",
-                "!**/package.json",
+                "--iterate",
                 "--kill",
-                "node",
-                "--detach"
+                "node"
             ],
             "options": {
                 "cwd": "${workspaceRoot}"
@@ -23,13 +19,9 @@
             "command": "vsce",
             "args": [
                 "up",
-                "--incremental",
+                "--iterate",
                 "--port",
-                "56375:9229",
-                "--no-probe",
-                "--sync",
-                "!**/package.json",
-                "--detach",
+                "50186:9229",
                 "--",
                 "node_modules/.bin/nodemon",
                 "--inspect=0.0.0.0:9229",
